@@ -29,7 +29,7 @@ public class StrategyController {
 		return townhallService.getAllTownhalls();
 	}
 	
-	@RequestMapping(value = "/townhalls/all", method = RequestMethod.GET, produces = { "application/json", "application/xml" })
+	@RequestMapping(value = "/basetypes/all", method = RequestMethod.GET, produces = { "application/json", "application/xml" })
 	@ResponseStatus(code = HttpStatus.OK)
 	public List<BaseType> getBaseTypes() {
 		
