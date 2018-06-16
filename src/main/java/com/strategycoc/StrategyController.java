@@ -10,19 +10,19 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.strategycoc.persistance.entity.TownHall;
-import com.strategycoc.persistance.repository.TownHallRepository;
+import com.strategycoc.service.TownhallService;
 
 
 @RestController
 public class StrategyController {
 	
 	@Autowired
-	private TownHallRepository townHallRepository;
+	private TownhallService townhallService;
 	
-	@RequestMapping(value = "/townhalls/all", method = RequestMethod.GET, consumes = { "application/json", "application/xml" })
+	@RequestMapping(value = "/townhalls/all", method = RequestMethod.GET, consumes = { "application/json", "application/xml" }, produces = { "application/json", "application/xml" })
 	@ResponseStatus(code = HttpStatus.OK)
 	public List<TownHall> getAppName() {
-		return townHallRepository.findAll();
+		return townhallService.getAllTownhalls();
 	}
 
 }
