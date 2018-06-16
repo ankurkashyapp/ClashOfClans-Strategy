@@ -8,7 +8,7 @@ public class StrategyController {
 	
 	@RequestMapping("get_app")
 	public String getAppName() {
-		return "ClashOfClans-Strategy";
+		return "ClashOfClans-Strategy vikas";
 	}
 
 }
