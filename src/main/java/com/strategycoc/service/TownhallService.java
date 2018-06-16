@@ -41,8 +41,8 @@ public class TownhallService {
 		
 	}
 	
-	public List<BaseDescription> getBaseDescriptions(int pageNo) {
-		return baseDescriptionRepository.findAll(getPageRequest(pageNo)).getContent();
+	public List<BaseDescription> getBaseDescriptions(int townhallId, int typeId, int pageNo) {
+		return baseDescriptionRepository.findByTownHallIdAndTypeId(townhallId, typeId, getPageRequest(pageNo)).getContent();
 	}
 	
 	private PageRequest getPageRequest(int pageNo) {

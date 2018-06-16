@@ -8,5 +8,5 @@ import com.strategycoc.persistance.entity.BaseDescription;
 
 public interface BaseDescriptionRepository extends JpaRepository<BaseDescription, Integer>{
 	
-	Page<BaseDescription> findAll(Pageable pageable);
+	Page<BaseDescription> findByTownHallIdAndTypeId(int townhallId, int typeId, Pageable pageable);
 }

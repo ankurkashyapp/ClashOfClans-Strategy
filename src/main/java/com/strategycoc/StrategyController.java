@@ -17,33 +17,35 @@ import com.strategycoc.persistance.entity.BaseType;
 import com.strategycoc.persistance.entity.TownHall;
 import com.strategycoc.service.TownhallService;
 
-
 @RestController
 @Scope("request")
 public class StrategyController {
-	
+
 	@Autowired
 	private TownhallService townhallService;
-	
-	
-	@RequestMapping(value = "/townhalls/all", method = RequestMethod.GET, produces = { "application/json", "application/xml" })
+
+	@RequestMapping(value = "/townhalls/all", method = RequestMethod.GET, produces = { "application/json",
+			"application/xml" })
 	@ResponseStatus(code = HttpStatus.OK)
 	public List<TownHall> getTownHalls() {
 		return townhallService.getAllTownhalls();
 	}
-	
-	@RequestMapping(value = "/basetypes/all", method = RequestMethod.GET, produces = { "application/json", "application/xml" })
+
+	@RequestMapping(value = "/basetypes/all", method = RequestMethod.GET, produces = { "application/json",
+			"application/xml" })
 	@ResponseStatus(code = HttpStatus.OK)
 	public List<BaseType> getBaseTypes() {
-		
+
 		return townhallService.getAllBaseTypes();
 	}
-	
-	@RequestMapping(value = "/basedescriptions", method = RequestMethod.GET, produces = { "application/json", "application/xml" })
+
+	@RequestMapping(value = "/basedescriptions", method = RequestMethod.GET, produces = { "application/json",
+			"application/xml" })
 	@ResponseStatus(code = HttpStatus.OK)
-	public List<BaseDescription> getBaseDescription(@RequestParam("page") int pageNo) {
-		
-		return townhallService.getBaseDescriptions(pageNo);
+	public List<BaseDescription> getBaseDescription(@RequestParam("townhallId") int townhallId,
+			@RequestParam("typeId") int typeId, @RequestParam("page") int pageNo) {
+
+		return townhallService.getBaseDescriptions(townhallId, typeId, pageNo);
 	}
 
 }
