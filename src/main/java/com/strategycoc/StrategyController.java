@@ -1,4 +1,4 @@
-package com.startegycoc;
+package com.strategycoc;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
