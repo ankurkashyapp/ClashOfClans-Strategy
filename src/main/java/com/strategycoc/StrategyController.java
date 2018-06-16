@@ -10,7 +10,7 @@ public class StrategyController {
 	
 	@RequestMapping("get_app")
 	public String getAppName() {
-		return new TownHallRepository().findAll().get(0).getTownhallName();
+		return "COC Strategy";
 	}
 
 }
