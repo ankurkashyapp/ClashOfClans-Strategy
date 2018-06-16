@@ -12,18 +12,18 @@ import javax.persistence.Table;
 public class TownHall {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="townhallId")
-	private int townhallId;
+	@Column(name="townhallid")
+	private int townhallid;
 	
 	@Column(name = "townhallName")
 	private String townhallName;
 
 	public int getTownhallId() {
-		return townhallId;
+		return townhallid;
 	}
 
-	public void setTownhallId(int townhallId) {
-		this.townhallId = townhallId;
+	public void setTownhallId(int townhallid) {
+		this.townhallid = townhallid;
 	}
 
 	public String getTownhallName() {
@@ -36,7 +36,7 @@ public class TownHall {
 
 	@Override
 	public String toString() {
-		return "TownHall [townhallId=" + townhallId + ", townhallName=" + townhallName + "]";
+		return "TownHall [townhallId=" + townhallid + ", townhallName=" + townhallName + "]";
 	}
 	
 	
