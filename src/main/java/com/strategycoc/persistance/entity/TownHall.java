@@ -1,5 +1,6 @@
 package com.strategycoc.persistance.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,8 +12,10 @@ import javax.persistence.Table;
 public class TownHall {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="townhallId")
 	private int townhallId;
 	
+	@Column(name = "townhallName")
 	private String townhallName;
 
 	public int getTownhallId() {
