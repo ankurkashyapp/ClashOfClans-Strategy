@@ -3,6 +3,7 @@ package com.strategycoc;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,6 +15,7 @@ import com.strategycoc.service.TownhallService;
 
 
 @RestController
+@Scope("request")
 public class StrategyController {
 	
 	@Autowired
