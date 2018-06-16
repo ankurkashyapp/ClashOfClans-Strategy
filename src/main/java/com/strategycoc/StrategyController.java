@@ -39,7 +39,7 @@ public class StrategyController {
 		return townhallService.getAllBaseTypes();
 	}
 	
-	@RequestMapping(value = "/basedescriptions/all", method = RequestMethod.GET, produces = { "application/json", "application/xml" })
+	@RequestMapping(value = "/basedescriptions", method = RequestMethod.GET, produces = { "application/json", "application/xml" })
 	@ResponseStatus(code = HttpStatus.OK)
 	public List<BaseDescription> getBaseDescription(@RequestParam("page") int pageNo) {
 		

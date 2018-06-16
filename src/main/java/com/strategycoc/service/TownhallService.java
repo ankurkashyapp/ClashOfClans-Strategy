@@ -42,10 +42,10 @@ public class TownhallService {
 	}
 	
 	public List<BaseDescription> getBaseDescriptions(int pageNo) {
-		return baseDescriptionRepository.findAll(getPageable(pageNo)).getContent();
+		return baseDescriptionRepository.findAll(getPageRequest(pageNo)).getContent();
 	}
 	
-	private PageRequest getPageable(int pageNo) {
-		return new PageRequest(pageNo, PAGE_SIZE);
+	private PageRequest getPageRequest(int pageNo) {
+		return new PageRequest(pageNo-1, PAGE_SIZE);
 	}
 }
