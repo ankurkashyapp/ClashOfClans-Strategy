@@ -21,7 +21,7 @@ public class StrategyController {
 	@Autowired
 	private TownhallService townhallService;
 	
-	@RequestMapping(value = "/townhalls", method = RequestMethod.GET, consumes = { "application/json", "application/xml" }, produces = { "application/json", "application/xml" })
+	@RequestMapping(value = "/townhalls/all", method = RequestMethod.GET, produces = { "application/json", "application/xml" })
 	@ResponseStatus(code = HttpStatus.OK)
 	public List<TownHall> getAppName() {
 		return townhallService.getAllTownhalls();
