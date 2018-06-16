@@ -17,7 +17,7 @@ public class BaseType {
 	private int typeId;
 	
 	@Column(name="typename")
-	private int typeName;
+	private String typeName;
 
 	public int getTypeId() {
 		return typeId;
@@ -27,11 +27,11 @@ public class BaseType {
 		this.typeId = typeId;
 	}
 
-	public int getTypeName() {
+	public String getTypeName() {
 		return typeName;
 	}
 
-	public void setTypeName(int typeName) {
+	public void setTypeName(String typeName) {
 		this.typeName = typeName;
 	}
 }
