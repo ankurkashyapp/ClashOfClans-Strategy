@@ -15,8 +15,8 @@ public class TownHall {
 	@Column(name="townhallid")
 	private int townhallid;
 	
-	@Column(name = "townhallName")
-	private String townhallName;
+	@Column(name = "townhallname")
+	private String townhallname;
 
 	public int getTownhallId() {
 		return townhallid;
@@ -27,16 +27,16 @@ public class TownHall {
 	}
 
 	public String getTownhallName() {
-		return townhallName;
+		return townhallname;
 	}
 
 	public void setTownhallName(String townhallName) {
-		this.townhallName = townhallName;
+		this.townhallname = townhallName;
 	}
 
 	@Override
 	public String toString() {
-		return "TownHall [townhallId=" + townhallid + ", townhallName=" + townhallName + "]";
+		return "TownHall [townhallId=" + townhallid + ", townhallName=" + townhallname + "]";
 	}
 	
 	
